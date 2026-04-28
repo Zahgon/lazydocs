@@ -273,10 +273,7 @@ def _code_snippet(snippet: str) -> str:
     Returns:
         str: Markdown code snippet.
     """
-    result = "```python\n"
-    result += snippet + "\n"
-    result += "```\n\n"
-    return result
+    pass
 
 
 def _get_line_no(obj: Any) -> Optional[int]:
@@ -353,11 +350,7 @@ def _get_src_root_path(obj: Any) -> str:
     Returns:
         str: Full source root path to the selected object.
     """
-    module = obj
-    if not isinstance(obj, types.ModuleType):
-        module = inspect.getmodule(obj)
-    root_package = module.__name__.split(".")[0]
-    return module.__file__.split(root_package)[0] + root_package
+    pass
 
 
 def _get_doc_summary(obj: Any) -> str:

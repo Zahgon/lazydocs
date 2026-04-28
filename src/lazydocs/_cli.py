@@ -60,25 +60,7 @@ def generate(
     ),
 ) -> None:
     """Generates markdown documentation for your Python project based on Google-style docstrings."""
-
-    try:
-        generate_docs(
-            paths=paths,
-            output_path=output_path,
-            src_base_url=src_base_url,
-            remove_package_prefix=remove_package_prefix,
-            ignored_modules=ignored_modules,
-            output_format=output_format,
-            overview_file=overview_file,
-            watermark=watermark,
-            validate=validate,
-            private_modules=private_modules,
-            include_toc=toc,
-            url_line_prefix=url_line_prefix,
-        )
-    except Exception as ex:
-        typer.echo(str(ex))
-        raise typer.Exit(code=1)
+    pass
 
 
 if __name__ == "__main__":
